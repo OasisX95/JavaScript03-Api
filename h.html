@@ -1,0 +1,25 @@
+<html>
+<head>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    
+<body>
+    <script>
+        
+       let p = "https://www.jsonstore.io/98e570014ff6bc52d980d205b737436419566f7a62f13fb6178d411ea661151c/users/2"
+       
+         $.ajax({
+  
+	           url : p,
+	           type : 'GET',
+	           dataType:'json',
+	           success : function(data) {
+                   console.log(data.result.age);
+                   
+               } 
+           })
+
+    </script>
+    </body>
+</html>

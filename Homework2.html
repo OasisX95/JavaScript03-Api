@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+<body>
+<script>
+    
+    $.ajax({
+    url: 'https://randomuser.me/api/',
+    dataType: 'json',
+        success: function(data) {
+        console.log(data.results[0].email);
+        console.log(data.results[0].login.password);
+        }
+    });
+     
+    </script>
+    </body>
+</html>

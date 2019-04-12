@@ -1,0 +1,37 @@
+<html>
+    
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <p></p>
+        <script>
+            
+            listOfPokemon = ["eevee", "umbreon", "espeon", "flareon"];
+            let p;
+            for(let i = 0; i < listOfPokemon.length; i++){
+                let a = listOfPokemon[i];
+                console.log(listOfPokemon[i]);
+                p = 'https://pokeapi.co/api/v2/pokemon/' + a;
+                
+            console.log(p);
+           $.ajax({
+  
+	           url : p,
+	           type : 'GET',
+	           dataType:'json',
+	           success : function(data) {
+                   console.log(data);
+                   console.log(data.name)
+		            $("p").text(data.name); 
+               } 
+           })
+
+            }
+
+                            
+        </script>
+    
+    </body>
+</html>
